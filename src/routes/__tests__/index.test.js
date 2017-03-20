@@ -3,13 +3,25 @@ import { MemoryRouter as Router } from 'react-router-dom'
 import { mount } from 'enzyme'
 import Routes from '../../routes'
 
-describe("Routes", () => {
+jest.mock('../../components/Login')
+jest.mock('../../components/App')
+
+describe('Routes', () => {
   it('should render TodoApp if path is /', () => {
-    const component = shallow(
+    const component = mount(
       <Router initialEntries={['/']}>
         <Routes />
       </Router>
     )
-    // expect().toEqual()
+    expect(component.text()).toEqual('App')
+  })
+
+  it('should render Login if path is /login', () => {
+    const component = mount(
+      <Router initialEntries={['/login']}>
+        <Routes />
+      </Router>
+    )
+    expect(component.text()).toEqual('Login')
   })
 })
