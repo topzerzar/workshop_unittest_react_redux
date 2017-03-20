@@ -4,6 +4,7 @@ import { Provider } from 'react-redux'
 import { mount } from 'enzyme'
 import NewTodoContainer from '../NewTodo'
 import NewTodoComponent from '../../components/NewTodo'
+import { ADD_TODO } from '../../actions/types'
 
 describe('NewTodo Container', () => {
   const createStore = configureMockStore()

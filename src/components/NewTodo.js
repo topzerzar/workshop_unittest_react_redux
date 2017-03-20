@@ -21,7 +21,7 @@ class NewTodo extends Component {
   render() {
     return (
       <div className="new-todo">
-        <input onChange={this.changeHandler} value={this.state} />
+        <input onChange={this.changeHandler} value={this.state.text} />
         <button onClick={this.clickHandler} className="btn btn-primary">Add</button>
       </div>
     )

@@ -1,8 +1,8 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import App from '../App'
-import NewTodo from '../../containers/NewTodo'
-import TodoList from '../../containers/TodoList'
+import App from '../components/App'
+import NewTodo from '../containers/NewTodo'
+import TodoList from '../containers/TodoList'
 
 describe('App', () => {
   let component
